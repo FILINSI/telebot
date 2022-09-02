@@ -1,0 +1,21 @@
+ERROR:TeleBot:Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 10
+ERROR:TeleBot:Exception traceback:
+Traceback (most recent call last):
+  File "C:\Program Files\Python310\lib\site-packages\telebot\__init__.py", line 977, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Program Files\Python310\lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "C:\Program Files\Python310\lib\site-packages\telebot\util.py", line 98, in run
+    task(*args, **kwargs)
+  File "c:\Users\FILINSI\Desktop\telegram bot v1.0\telegram v0.7.py", line 48, in send_notification
+    bot.send_message(chat_id=message.chat.id,text='раздача началась')
+  File "C:\Program Files\Python310\lib\site-packages\telebot\__init__.py", line 1451, in send_message
+    apihelper.send_message(
+  File "C:\Program Files\Python310\lib\site-packages\telebot\apihelper.py", line 276, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "C:\Program Files\Python310\lib\site-packages\telebot\apihelper.py", line 161, in _make_request
+    json_result = _check_result(method_name, result)
+  File "C:\Program Files\Python310\lib\site-packages\telebot\apihelper.py", line 188, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 10
+
